@@ -29,7 +29,7 @@ public class EnemyMove : MonoBehaviour {
         if (transform.position != waypoints[waypointIdx])
         {
             // if not, move towards the waypoint at moveSpeed
-            transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIdx], Time.deltaTime * moveSpeed);
+
         }
         else
         {
@@ -45,7 +45,7 @@ public class EnemyMove : MonoBehaviour {
 				waypointIdx++;
 			}
             // look at the next waypoint
-            transform.LookAt(waypoints[waypointIdx]);
+
         }
     }
 }

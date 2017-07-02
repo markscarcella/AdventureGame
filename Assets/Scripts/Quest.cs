@@ -50,10 +50,10 @@ public class Quest : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         // if the player enters the trigger
-        if (other.tag == "Player")
+        //if ()
         {
             // enable the alert canvas
-            alertCanvas.enabled = true;
+
         }
     }
 
@@ -65,28 +65,28 @@ public class Quest : MonoBehaviour {
             // play audio clip if it exists
             if (audioSource != null)
             {
-                audioSource.PlayOneShot(audioClip);
+
             }
             // open the UI dialogue box
-            GameManager.Instance.UI.showingDialogue = true;
+
             // check if the quest item is collected but the quest isn't complete
             if (hasQuestItem && !complete)
 			{
 				// set the quest to complete
-				complete = true;
+
                 // set the dialogue pages to the complete dialogue
-				GameManager.Instance.UI.dialoguePages = completeDialogue;
+
                 // add power to the player magic
                 // NB. You can instead add points or other modifiers here as a prize
                 // instead for finishing the quest
-                other.GetComponent<PlayerMagic>().ModifyPower(powerAdded);
-			}
+
+            }
             // if the player doesn't have the item
             else
             {
                 // display the quest instructions
-				GameManager.Instance.UI.dialoguePages = instructionDialogue;
-			}
+
+            }
 
 		}
 	}
@@ -94,10 +94,10 @@ public class Quest : MonoBehaviour {
 	private void OnTriggerExit(Collider other)
 	{
         // if the player leaves the trigger
-		if (other.tag == "Player")
+		//if ()
 		{
             // disable the alert canvas
-            alertCanvas.enabled = false;
-		}
+
+        }
 	}
 }

@@ -25,12 +25,12 @@ public class EnemyHealth : MonoBehaviour {
     public void ModifyHealth(int amt)
 	{
         // add amt to health
-		health += amt;
+
         // if the health is less than zero
         if (isBoss && health <= 0)
         {
             // win the game
-            GameManager.Instance.EndGame(true);
+
         }
 	}
 }

@@ -25,13 +25,13 @@ public class DealDamage : MonoBehaviour {
         if (damagePlayer && collision.gameObject.GetComponent<PlayerHealth>() != null)
         {
             // add -damage to the playerhealth
-            collision.gameObject.GetComponent<PlayerHealth>().ModifyHealth(-damage);
+
         }
         // else if an enemy hits the collider
         else if (collision.gameObject.GetComponent<EnemyHealth>() != null)
 		{
             // add -damage to the enemy health
-			collision.gameObject.GetComponent<EnemyHealth>().ModifyHealth(-damage);
-		}
+
+        }
     }
 }

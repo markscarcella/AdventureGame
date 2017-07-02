@@ -20,7 +20,7 @@ public class CameraFollow : MonoBehaviour {
         if (GameManager.Instance.player != null)
         {
             // Make camera follow the player at defined distance       
-            Camera.main.transform.position = GameManager.Instance.player.transform.position - Camera.main.transform.forward * cameraDistance;
+
         }
 	}
 }

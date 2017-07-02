@@ -25,11 +25,11 @@ public class QuestItem : MonoBehaviour {
         if (other.tag == "Player")
         {
             // add the item to the inventory
-            GameManager.Instance.AddToInventory(this);
+
             // set the quest item to true
-            associatedQuest.hasQuestItem = true;
+
             // destroy the game object
-            Destroy(gameObject);
+
         }
     }
 }

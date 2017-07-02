@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
 
     // define the move and jump speeds
-	public float moveSpeed;
-    public float jumpSpeed;
+
 
     // define the player's rigidbody and the direction we will move
 	Rigidbody rb;
@@ -21,7 +20,7 @@ public class PlayerMove : MonoBehaviour {
     void FixedUpdate()
     {
         // move the player
-        MovePlayer();
+
     }
 
     void MovePlayer()
@@ -48,13 +47,13 @@ public class PlayerMove : MonoBehaviour {
 		}
 
         // check if the new direction is not zero
-		if (direction != Vector3.zero)
+		//if ()
 		{
             // set player forward to be in the new direction
-			transform.forward = direction.normalized;
+
             // add to the player velocity in the forward direction
-			rb.velocity = new Vector3(transform.forward.x * moveSpeed, rb.velocity.y, transform.forward.z * moveSpeed);
-		}
+
+        }
     }
 
 

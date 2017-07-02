@@ -27,14 +27,14 @@ public class PlayerHealth : MonoBehaviour {
     public void ModifyHealth(int amt)
 	{
         // add amt to the health
-		health += amt;
-        // modufy the healthbar
-		GameManager.Instance.UI.healthBar.value = health;
+
+        // modify the healthbar
+
         // if the health is less than zero
         if (health <= 0)
         {
             // lose the game
-            GameManager.Instance.EndGame(false);
+
         }
 	}
 }

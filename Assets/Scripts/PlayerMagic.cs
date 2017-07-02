@@ -38,10 +38,10 @@ public class PlayerMagic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // if the space key is pressed and the power is high enough
-        if (Input.GetKeyDown(KeyCode.Space) && power >= maxPower)
+        //if ()
         {
             // cast spell
-            CastSpell();
+
         }
 	}
 
@@ -50,21 +50,21 @@ public class PlayerMagic : MonoBehaviour {
         // play audio clip if it exists
         if (audioClip != null)
         {
-            audioSource.PlayOneShot(audioClip);
+
         }
         // instantiate the projectile at the shoot position
-        GameObject spell = Instantiate(projectile, shootPosition.position, Quaternion.identity);
+
         // give the spell a force forwards
-		spell.GetComponent<Rigidbody>().AddForce(transform.forward * 100);
+
         // destroy the spell after 3 seconds
-		Destroy(spell, 3.0f);
-	}
+
+    }
 
 	public void ModifyPower(int amt)
 	{
         // increase power by amt
-		power += amt;
+
         // modify the powerbar value
-		GameManager.Instance.UI.powerBar.value = power;
-	}
+
+    }
 }

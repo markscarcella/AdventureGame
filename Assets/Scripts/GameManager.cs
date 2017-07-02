@@ -76,27 +76,27 @@ public class GameManager : MonoBehaviour {
     public void EndGame(bool win)
     {
         // turn off the game UI and enable the menu
-        UI.gameObject.SetActive(false);
-        menuCanvas.enabled = false;
+
+
         // check if we've won
 		if (win)
         {
             // enable win canvas
-            winCanvas.enabled = true;
-            loseCanvas.enabled = false;
+
+
         }
         else
 		{
             // enable lose canvas
-            winCanvas.enabled = false;
-			loseCanvas.enabled = true;
+
+
 		}
     }
 
     public void RestartGame()
     {
         // reload the current scene
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 
     public void StartGame()
