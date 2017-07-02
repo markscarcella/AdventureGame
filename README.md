@@ -18,7 +18,7 @@ After playing duplicate the template scene and open
 - EventSystem + Directional List - The usual stuff
 
 ### 1. Follow player with camera
-- Add the followPlayer script to the camera
+- Add the CameraFollow script to the camera
 - Add the code to follow the player
 - A good distance is 10 and a good size is 1.5
 - Push play and you should see the player
