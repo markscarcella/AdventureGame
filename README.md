@@ -18,6 +18,7 @@ After playing duplicate the template scene and open
 - EventSystem + Directional List - The usual stuff
 
 ### 1. Gettin the player moving
+- Add Rigidbody and box collider
 - Add playerMove to the player and open the script.
 - Fill in the code in the MovePlayer() function
 - Add MovePlayer() to the update loop
