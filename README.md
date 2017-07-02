@@ -17,17 +17,18 @@ After playing duplicate the template scene and open
 - OverworldObjects - An object to hold all the trees etc of the world (for a neater heirarchy)
 - EventSystem + Directional List - The usual stuff
 
-### 1. Gettin the player moving
+### 1. Follow player with camera
+- Add the followPlayer script to the camera
+- Add the code to follow the player
+- A good distance is 10 and a good size is 1.5
+- Push play and you should see the player
+
+### 2. Gettin the player moving
 - Add Rigidbody and box collider
 - Add playerMove to the player and open the script.
 - Fill in the code in the MovePlayer() function
 - Add MovePlayer() to the update loop
 - Add the player to the GameManager in the editor
-
-### 2. Follow player with camera
-- Now the player moves out of the screen, so add the followPlayer script to the camera
-- Add the code to follow the player
-- A good distance is 10 and a good size is 1.5
 
 ### 3. Add objects into world
 - Can't tell you're moving! Open MagicaVoxel and make trees, houses, rocks, etc
