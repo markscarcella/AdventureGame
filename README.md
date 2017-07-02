@@ -8,6 +8,15 @@ Firstly play the ExampleGame scene to get an idea of the kind of game I was goin
 
 After playing duplicate the template scene and open
 
+### 0. What's in the scene?
+- MainCamera - Don't change this, it's set up for isomorphic game
+- GameManager - Controls the game. We won't be changing much in here
+- UI - The game ui such as health, power, inventory. We won't change much of the GameUI script (UIs are boring)
+- Player - the player! Lots of code here to play with
+- Canvases - This object holds the menu, win, and lose canvases. Play with these towards the end
+- OverworldObjects - An object to hold all the trees etc of the world (for a neater heirarchy)
+- EventSystem + Directional List - The usual stuff
+
 ### 1. Gettin the player moving
 - Add playerMove to the player and open the script.
 - Fill in the code in the MovePlayer() function
