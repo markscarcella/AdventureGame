@@ -32,7 +32,14 @@ public class Quest : MonoBehaviour {
         // disable alert canvas
         alertCanvas.enabled = false;
         // assign the audio source
-        audioSource = GetComponent<AudioSource>();
+        if (GetComponent<AudioSource>() != null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+        else
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
 	}
 	
 	// Update is called once per frame
@@ -55,8 +62,11 @@ public class Quest : MonoBehaviour {
         // if the player is in the trigger and pushes X
         if (other.tag == "Player" && Input.GetKeyDown(KeyCode.X))
         {
-            // play audio clip
-            audioSource.PlayOneShot(audioClip);
+            // play audio clip if it exists
+            if (audioSource != null)
+            {
+                audioSource.PlayOneShot(audioClip);
+            }
             // open the UI dialogue box
             GameManager.Instance.UI.showingDialogue = true;
             // check if the quest item is collected but the quest isn't complete

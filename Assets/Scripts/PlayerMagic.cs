@@ -24,8 +24,15 @@ public class PlayerMagic : MonoBehaviour {
 		GameManager.Instance.UI.powerBar.maxValue = maxPower;
         // start the powerbar value with 0 power
 		GameManager.Instance.UI.powerBar.value = 0;
-        // assign the audio source
-        audioSource = GetComponent<AudioSource>();
+		// assign the audio source
+		if (GetComponent<AudioSource>() != null)
+		{
+			audioSource = GetComponent<AudioSource>();
+		}
+		else
+		{
+			audioSource = gameObject.AddComponent<AudioSource>();
+		}
     }
 	
 	// Update is called once per frame
@@ -40,8 +47,11 @@ public class PlayerMagic : MonoBehaviour {
 
 	void CastSpell()
 	{
-        // play audio clip
-        audioSource.PlayOneShot(audioClip);
+        // play audio clip if it exists
+        if (audioClip != null)
+        {
+            audioSource.PlayOneShot(audioClip);
+        }
         // instantiate the projectile at the shoot position
         GameObject spell = Instantiate(projectile, shootPosition.position, Quaternion.identity);
         // give the spell a force forwards
