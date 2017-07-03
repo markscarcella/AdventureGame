@@ -48,3 +48,23 @@ After playing duplicate the template scene and open
 - Add at least 1 page for each with some text (can be test text for now)
 - Check it works
 - Now we can think about our story more. Maybe storyboard?
+
+### 5. Add a Quest Item
+- Add a collectible model to the scene (eg a gem, key, power orb, etc)
+- Add box collider and edit to cover model
+- Add QuestItem.cs script and fill in code in OnTriggerEnter()
+- Open photoshop or PikoPixel and draw an image for the inventory
+- Once complete, add the associated quest to the item. This means now that if you collect the item and go back and speak to the quest giver, the quest will become complete.
+- Test picking up objects and make sure they appear in the inventory
+
+### 6. Add magic meter/score/respect/etc
+- This isn't necessary, but adds to the gameplay
+- In the Quest.cs script, you can add to a score or a slider on the UI for your quest prize, eg: 
+* Add money variable to the GameManager and link it to a text object on the UI. Finishing a quest adds money
+* Add power to the magic meter and increase slider on screen
+
+### 7. Make game polished
+- At this point I think there is enough complexity that a good story can be told by accepting quests, collecting items, and then bringing them back.
+- Open GameManager.cs and add the RestartGame() and EndGame() scripts
+- Edit the Menu/Win/Lose canvases to be your game name, instructions, author, etc
+- Add background music to the AudioSource on the GameManager
